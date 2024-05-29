@@ -48,10 +48,17 @@ class Ver_comidasAgregar(CreateView):
      success_url = reverse_lazy("recetas:lista_comidas")
 
 
-def detalle_comidas(request, pk: int):
-    consulta = Ver_comidas.objects.get(id=pk)
-    contexto = {"detalle" : consulta}
-    return render (request, "recetas/lista_comidas_detalles.html", contexto)
+# def detalle_comidas(request, pk: int):
+#     consulta = Ver_comidas.objects.get(id=pk)
+#     contexto = {"detalle" : consulta}
+#     return render (request, "recetas/lista_comidas_detalles.html", contexto)
+
+class Ver_comidaDetalle(DetailView):
+    model = Ver_comidas
+    template_name = "recetas/lista_comidas_detalles.html"
+
+    def get_context_data(self, **kwargs):
+        return {"detalle": self.get_object()}
 
 
 
