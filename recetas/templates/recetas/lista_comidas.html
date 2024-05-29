@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block titulo| %}
+    
+{% endblock titulo| %}
+
+{% block contenido %} 
+    <form action="{% url 'recetas:lista_comidas' %}" method="get" >
+        <input type="text" name="busqueda" placeholder="Buscar...">
+    </form>
+
+    <h1>Comidas</h1>
+    <h2>Listado de comidas</h2>
+
+    <ul>
+        {% for comida in comidas  %}
+        <li><p> {{comida.comidas}} | {{comida.categorias}}
+            <a href="{% url 'recetas:detalle_comidas' pk=comida.id %}">Ver mas</a>    
+        </li>       
+        {% endfor %}
+    </ul>  
+    <button><a href="{% url 'recetas:index' %}">Volver atrás</a></button>
+{% endblock contenido %}

@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block titulo %}
+    Inicio
+{% endblock titulo %}
+{% block contenido %}
+    
+    <!-- Page Content-->
+    <div class="container px-4 px-lg-5">
+        <!-- Heading Row-->
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+            <div class="col-lg-7"> <img class="img-fluid rounded mb-4 mb-lg-0"
+                     src="{% static 'core/img/comida.webp'%}" alt="..." />
+            </div>
+            <div class="col-lg-5">
+                <h1 class="font-weight-light">Bienvenidos</h1>
+                <p>
+                    Hola! Bienvenidos a CoocKim. Estamos trabajando para que puedas disfrutar al máximo la gastronomia coreana desde tu casa a través de nuestras recetas
+                </p>
+                <a class="btn btn-primary" href="#!">Ver recetas</a>
+            </div>
+        </div>
+        <!-- Call to Action-->
+        <div class="card text-white bg-secondary my-5 py-4 text-center">
+            <div class="card-body">
+                <p class="text-white m-0">
+                    Próximamente, página en desarrollo
+                </p>
+            </div>
+        </div>
+        
+   
+{% endblock contenido %}

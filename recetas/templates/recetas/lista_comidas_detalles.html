@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+{% block titulo| %}
+    Comidas| detalle
+{% endblock titulo| %}
+
+{% block contenido %}
+
+<ul>
+    <li>
+        {{detalle.picante}}
+        <a href="{% url 'recetas:lista_comidas' %}" class="btn btn-primary" >Volver</a>
+    </li>
+</ul>
+{% endblock contenido %}

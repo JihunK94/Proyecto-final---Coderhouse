@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    Comidas
+{% endblock titulo %}
+
+{% block contenido %}
+    <h1>Comidas</h1>
+    <div>
+    <button><a href="{% url 'recetas:lista_comidas' %}">Lista de comidas</a></button>
+    <button><a href="{% url 'core:index' %}">Ir al inicio</a></button></div>
+    <button><a href="{% url 'recetas:agregar_comidas' %}">Agregar comidas</a></button>
+    </div> 
+{% endblock contenido %}    
