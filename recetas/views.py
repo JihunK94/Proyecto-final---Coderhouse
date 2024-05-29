@@ -60,6 +60,10 @@ class Ver_comidaDetalle(DetailView):
     def get_context_data(self, **kwargs):
         return {"detalle": self.get_object()}
 
+class Ver_comidaAgregar(UpdateView):
+    model = Ver_comidas
+    form_class = ListacomidasForm
+    success_url = reverse_lazy("recetas:lista_comidas")
 
 
 

@@ -1,16 +1,16 @@
 {% extends 'core/base.html' %}
 
 {% block titulo| %}
-    
+    Comida | Comida:Lista
 {% endblock titulo| %}
 
 {% block contenido %} 
+   
+    <h1>Listado de comidas</h1>
+    
     <form action="{% url 'recetas:lista_comidas' %}" method="get" >
         <input type="text" name="busqueda" placeholder="Buscar...">
     </form>
-
-    <h1>Comidas</h1>
-    <h2>Listado de comidas</h2>
 
     <ul>
         {% for object in object_list  %}

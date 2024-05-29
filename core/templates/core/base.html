@@ -8,6 +8,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>
+            
             {% block titulo %}
             {% endblock titulo %}
         </title>
@@ -19,7 +20,11 @@
         <link href=" {% static 'core/css/styles.css' %}" rel="stylesheet" />
     </head>
     <body>
-        
+    <h1>
+        {% block body_title %}
+        {% endblock body_title %}
+    </h1>        
+
         {% include 'core/components/navbar.html' %}
 
         {% block contenido %}

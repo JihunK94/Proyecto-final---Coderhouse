@@ -1,9 +1,16 @@
 {% extends 'core/base.html' %}
 
 {% block titulo| %}
-        
-{% endblock titulo| %}
 
+{% endblock titulo| %}
+{% block body_title %}
+    {% if form.instance.pk %}
+        Comida - Comida: Edición
+    {% else %}
+        Comida - Comida: Agregar
+        
+    {% endif %}
+{% endblock body_title %}
 {% block contenido %}
 
 <form action="" method="post">
