@@ -13,9 +13,9 @@
     <h2>Listado de comidas</h2>
 
     <ul>
-        {% for comida in comidas  %}
-        <li><p> {{comida.comidas}} | {{comida.categorias}}
-            <a href="{% url 'recetas:detalle_comidas' pk=comida.id %}">Ver mas</a>    
+        {% for object in object_list  %}
+        <li><p> {{object.comidas}} | {{object.categorias}}
+            <a href="{% url 'recetas:detalle_comidas' pk=object.id %}">Ver mas</a>    
         </li>       
         {% endfor %}
     </ul>  
