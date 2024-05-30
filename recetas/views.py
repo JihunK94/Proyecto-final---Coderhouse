@@ -64,11 +64,12 @@ class Ver_comidaModificar(UpdateView):
     model = Ver_comidas
     form_class = ListacomidasForm
     success_url = reverse_lazy("recetas:lista_comidas")
-
+    template_name = "recetas/lista_comidas:form.html"
+    
 class Ver_comidasBorrar(DeleteView):
     model = Ver_comidas
     success_url = reverse_lazy("recetas:lista_comidas")
-
+    template_name = "recetas/lista_comidas:form.html"
 
 
 

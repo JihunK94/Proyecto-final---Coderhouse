@@ -16,6 +16,8 @@
         {% for object in object_list  %}
         <li><p> {{object.comidas}} | {{object.categorias}}
             <a href="{% url 'recetas:detalle_comidas' pk=object.id %}">Ver mas</a>    
+            <a href="{% url 'recetas:modificar_comidas' pk=object.id %}">Editar</a>    
+            <a href="{% url 'recetas:borrar_comidas' pk=object.id %}">Eliminar</a>    
         </li>       
         {% endfor %}
     </ul>  

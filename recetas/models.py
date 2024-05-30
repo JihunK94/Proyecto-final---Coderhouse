@@ -26,4 +26,7 @@ class Ver_comidas(models.Model):
     def __str__(self) -> str:
         return self.comidas
 
+class Ver_sugerencias(models.Models):
+    comidas = models.CharField(max_length= 500)
+    categoria = models.CharField(max_length=100)
 
