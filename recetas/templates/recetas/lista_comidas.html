@@ -6,20 +6,18 @@
 
 {% block contenido %} 
    
-    <h1>Listado de comidas</h1>
-    
-    <form action="{% url 'recetas:lista_comidas' %}" method="get" >
-        <input type="text" name="busqueda" placeholder="Buscar...">
-    </form>
+{% for object in object_list %}
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ object.comidas }}</h5>
+    <p class="card-text">{{ object.categorias }}</p>
+    <div class="card-footer">
+      <a href="{% url 'recetas:detalle_comidas' pk=object.id %}" class="btn btn-primary">Ver más</a>
+      <a href="{% url 'recetas:modificar_comidas' pk=object.id %}" class="btn btn-warning">Editar</a>
+      <a href="{% url 'recetas:borrar_comidas' pk=object.id %}" class="btn btn-danger">Eliminar</a>
+    </div>
+  </div>
+</div>
+{% endfor %}
 
-    <ul>
-        {% for object in object_list  %}
-        <li><p> {{object.comidas}} | {{object.categorias}}
-            <a href="{% url 'recetas:detalle_comidas' pk=object.id %}">Ver mas</a>    
-            <a href="{% url 'recetas:modificar_comidas' pk=object.id %}">Editar</a>    
-            <a href="{% url 'recetas:borrar_comidas' pk=object.id %}">Eliminar</a>    
-        </li>       
-        {% endfor %}
-    </ul>  
-    <button><a href="{% url 'recetas:index' %}">Volver atrás</a></button>
 {% endblock contenido %}
