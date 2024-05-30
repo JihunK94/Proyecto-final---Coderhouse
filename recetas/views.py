@@ -1,7 +1,7 @@
 from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render, redirect
-from recetas.models import Ver_comidas
+from recetas.models import Ver_comidas, Ver_sugerencias
 from recetas.forms import ListacomidasForm
 from django.views.generic import CreateView, ListView, DeleteView, UpdateView, DetailView
 from django.urls import reverse_lazy
@@ -70,6 +70,12 @@ class Ver_comidasBorrar(DeleteView):
     model = Ver_comidas
     success_url = reverse_lazy("recetas:lista_comidas")
     template_name = "recetas/lista_comidas:form.html"
+
+def lista_sugerencias(request):
+    consulta = Ver_sugerencias.objects.all()
+    contexto = {"sugerencias":consulta}
+    return render(request,"recetas/lista_sugerencias.html", contexto)
+   
 
 
 
