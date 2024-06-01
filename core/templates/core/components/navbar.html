@@ -22,7 +22,7 @@
                     <a class="nav-link" href="{% url 'recetas:index' %}">Ver comidas</a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="http://wa.me/1145678912" target="_blank">Nosotros</a>
+                    <a class="nav-link" href="{% url 'recetas:nosotros' %}">Nosotros</a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">

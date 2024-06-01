@@ -20,3 +20,4 @@ def register(request):
     else: 
         form = CustomUserCreationForm() 
     return render(request, "core/register.html", {"form":form})        
+
