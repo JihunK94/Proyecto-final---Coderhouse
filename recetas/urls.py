@@ -11,5 +11,5 @@ urlpatterns =[
     path("comidas/detail/<int:pk>", Ver_comidaDetalle.as_view(), name= "detalle_comidas"),
     path("comidas/update/<int:pk>", Ver_comidaModificar.as_view(), name= "modificar_comidas"),
     path("comidas/create", Ver_comidasAgregar.as_view(), name= "agregar_comidas"),
-    path("comidas/update/<int:pk>", Ver_comidasBorrar.as_view(), name= "borrar_comidas"),
+    path("comidas/borrar/<int:pk>", Ver_comidasBorrar.as_view(), name= "borrar_comidas"),
 ]
