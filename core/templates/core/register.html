@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+{% block titulo %}
+{% endblock titulo %}
+{% block body_title %}
+{% endblock body_title %}
+{% block contenido %}
+    <form method="post">
+        {% csrf_token %}
+    <table>
+        {{form.as_table}}
+        <input type="hidden" name="next" value="{% url 'core:login' %}">
+        
+    </table>
+    <button type="submit" class="btn btn-primary">Registrarse</button>
+    <a href="{% url 'core:index' %}" class="btn btn-secondary">Volver atrás</a> 
+    </form>
+{% endblock contenido %}
