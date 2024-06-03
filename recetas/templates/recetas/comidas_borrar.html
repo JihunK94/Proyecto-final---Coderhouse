@@ -1,18 +1,18 @@
 {% extends 'core/base.html' %}
 
-{% block title %}
+{% block titulo %}
     
-{% endblock title %}
+{% endblock titulo %}
 
 {% block body_title %}
     
 {% endblock body_title %}
 
-{% block content %}
+{% block contenido %}
     <p class="fs-5  fst-italic"> ¿Eliminar "{{borrar.comida}}"? </p>
     <form method="post">
         {% csrf_token %}
         <button type="submit"> Confirmar</button>
     </form>
     <a href="{% url 'recetas:index' %}">Volver al inicio </a>
-{% endblock content %}
+{% endblock contenido %}
