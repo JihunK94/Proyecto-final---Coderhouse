@@ -2,7 +2,7 @@ from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render
 from recetas.models import Ver_comidas, Ver_sugerencias
-from recetas.forms import ListacomidasForm
+from recetas.forms import ListacomidasForm, ListasugerenciasForm
 from django.views.generic import CreateView, ListView, DeleteView, UpdateView, DetailView
 from django.urls import reverse_lazy
 
@@ -77,7 +77,11 @@ class Ver_sugerenciasList(ListView):
     template_name = "recetas/lista_sugerencias.html"
     context_object_name = "sugerencias"
    
-   
+class Ver_sugerenciasAgregar(CreateView):
+    model = Ver_sugerencias
+    form_class = ListasugerenciasForm
+    template_name = "recetas/lista_sugerencias_agregar.html"
+    success_url = reverse_lazy("recetas:lista_sugerencias")
 
 def about_me(request):
     return render(request, "recetas/about_me.html")
