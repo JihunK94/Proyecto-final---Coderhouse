@@ -10,7 +10,7 @@
 <ul class="list-group">
   {% for sugerencia in sugerencias %}
     <li class="list-group-item">
-      <span class="fw-bold">{{ sugerencia.sugerencia_numero }}</span> | {{ sugerencia.fecha_publicación }} | {{ sugerencia.comida_categoria_picante }}
+      <span class="fw-bold">{{ sugerencia.numero }}</span> | {{ sugerencia.fecha }} | {{ sugerencia.pedido }}
     </li>
   {% endfor %}
 </ul>

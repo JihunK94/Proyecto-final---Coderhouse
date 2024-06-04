@@ -27,11 +27,11 @@ class Ver_comidas(models.Model):
         return self.comidas
 
 class Ver_sugerencias(models.Model):
-    comida_categoria_picante = models.CharField(max_length=500)
-    fecha_publicación = models.DateField()
-    sugerencia_numero = models.DecimalField(max_digits=5, decimal_places=0)
+    pedido = models.CharField(max_length=500)
+    fecha = models.DateField()
+    numero = models.DecimalField(max_digits=5, decimal_places=0)
 
     def __str__(self) -> str:
-        return f"{self.sugerencia_numero} - {self.comida_categoria_picante}"
+        return f"{self.numero} - {self.pedido}"
 
 

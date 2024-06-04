@@ -72,10 +72,13 @@ class Ver_comidasBorrar(DeleteView):
     success_url = reverse_lazy("recetas:lista_comidas")
     template_name = "recetas/comidas_borrar.html"
 
-def lista_sugerencias(request):
-    consulta = Ver_sugerencias.objects.all()
-    contexto = {"sugerencias":consulta}
-    return render(request,"recetas/lista_sugerencias.html", contexto)
+class Ver_sugerenciasList(ListView):
+    model = Ver_sugerencias
+    template_name = "recetas/lista_sugerencias.html"
+    context_object_name = "sugerencias"
    
+   
+
 def about_me(request):
     return render(request, "recetas/about_me.html")
+
