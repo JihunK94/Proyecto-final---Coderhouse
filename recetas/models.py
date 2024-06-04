@@ -29,7 +29,7 @@ class Ver_comidas(models.Model):
 class Ver_sugerencias(models.Model):
     pedido = models.CharField(max_length=500)
     fecha = models.DateField()
-    numero = models.DecimalField(max_digits=5, decimal_places=0)
+    numero = models.DecimalField(max_digits=5, decimal_places=0, unique= True)
 
     def __str__(self) -> str:
         return f"{self.numero} - {self.pedido}"
