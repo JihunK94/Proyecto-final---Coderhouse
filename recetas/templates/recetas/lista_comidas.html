@@ -12,12 +12,15 @@
     <h5 class="card-title">{{ object.comidas }}</h5>
     <p class="card-text">{{ object.categorias }}</p>
     <div class="card-footer">
+      {% if request.user.is_staff %}
+        <a href="{% url 'recetas:modificar_comidas' pk=object.id %}" class="btn btn-warning">Editar</a>
+        <a href="{% url 'recetas:borrar_comidas' pk=object.id %}" class="btn btn-danger">Eliminar</a>
+      {% endif %}
       <a href="{% url 'recetas:detalle_comidas' pk=object.id %}" class="btn btn-primary">Ver más</a>
-      <a href="{% url 'recetas:modificar_comidas' pk=object.id %}" class="btn btn-warning">Editar</a>
-      <a href="{% url 'recetas:borrar_comidas' pk=object.id %}" class="btn btn-danger">Eliminar</a>
     </div>
   </div>
 </div>
+
 {% endfor %}
 
 {% endblock contenido %}

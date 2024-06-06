@@ -3,7 +3,7 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.contrib.auth.views import LogoutView
 from  core.views import index, CustomLoginView, register
-from django.urls import path
+
 
 app_name = "core"
 

@@ -7,12 +7,17 @@
 {% endblock body_title %}
 {% block contenido %}
 
-<form action="" method="post">
-    {% csrf_token %}
-    <table>
-        {{ form.as_p }}
-    </table>
-    <button type="submit">Guardar</button>
-    <a href="{% url 'recetas:lista_sugerencias' %}" class="btn btn-primary" >Volver</a>
+<form action="" method="post" class="form-horizontal">  {% csrf_token %}
+  <fieldset>
+    <legend>Editar Receta (Sugerencia)</legend>  {{ form.as_p }}
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a href="{% url 'recetas:lista_sugerencias' %}" class="btn btn-default">Volver</a>
+      </div>
+    </div>
+  </fieldset>
 </form>
+
 {% endblock contenido %}
