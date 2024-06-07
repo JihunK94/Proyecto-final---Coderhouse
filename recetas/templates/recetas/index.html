@@ -11,6 +11,9 @@
     <div>
     <button><a href="{% url 'recetas:lista_comidas' %}">Lista de comidas</a></button>
     <button><a href="{% url 'core:index' %}">Ir al inicio</a></button></div>
+    {% if request.user.is_staff  %}
     <button><a href="{% url 'recetas:agregar_comidas' %}">Agregar comidas</a></button>
+    {% endif %}
+    
     </div> 
 {% endblock contenido %}    

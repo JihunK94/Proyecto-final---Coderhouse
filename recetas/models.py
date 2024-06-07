@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 class Comidas_coreanas(models.Model):
     nombre = models.CharField(max_length= 255, unique=True)
@@ -28,8 +29,8 @@ class Ver_comidas(models.Model):
 
 class Ver_sugerencias(models.Model):
     pedido = models.CharField(max_length=500)
-    fecha = models.DateField()
-    numero = models.DecimalField(max_digits=5, decimal_places=0, unique= True)
+    fecha = models.DateField(default=datetime.date.today)
+    numero = models.AutoField(primary_key=True)
 
     def __str__(self) -> str:
         return f"{self.numero} - {self.pedido}"
