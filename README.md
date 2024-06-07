@@ -22,7 +22,8 @@ Subir las recetas.
 Completar la subida de los ingredientes con sus alternativas.
 Implementar mejoras estéticas para una experiencia de usuario más atractiva.
 
-
+Enlace de video explicativo:
+https://youtu.be/meDL7X7ius0
 
 
 # Comandos
