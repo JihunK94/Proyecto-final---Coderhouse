@@ -1,14 +1,28 @@
-Comision : 54140
-Alumno : Jihun Kim
-Profesor : Esteban Acevedo
-Tutor : Hugo Mon
+Comisión: 54140
+
+Alumno: Jihun Kim
+
+Profesor: Esteban Acevedo
+
+Tutor: Hugo Mon
+
+Proyecto:
+
+Introducción:
+
+Este proyecto nace con la noble intención de acercar la rica gastronomía coreana a las personas de habla hispana, facilitando su introducción a este fascinante mundo culinario.
+
+Objetivo:
+
+Nuestra meta es guiar paso a paso a los entusiastas de la cocina, brindándoles recetas detalladas y explicaciones claras sobre los ingredientes necesarios. Además, se ofrecerán alternativas para aquellos ingredientes que puedan ser difíciles de encontrar en sus países, asegurando que todos puedan disfrutar de la experiencia culinaria coreana.
+
+Futuras mejoras:
+
+Subir las recetas.
+Completar la subida de los ingredientes con sus alternativas.
+Implementar mejoras estéticas para una experiencia de usuario más atractiva.
 
 
-Proyecto: Este proyecto surgió con la idea de poder ayudar a las personas latinas a que se puedan introducir al mundo gastronómico coreano de la manera más sencilla posible.
-
-Objetivo: Explicar paso a paso las recetas y los ingredientes necesarios, teniendo en cuenta otras alternativas que se puedan conseguir en sus paises.
-
-Mejoras: Terminar de subir los ingredientes - Mejoras estéticas
 
 
 # Comandos
@@ -66,4 +80,5 @@ Mejoras: Terminar de subir los ingredientes - Mejoras estéticas
 
 `python manage.py createsuperuser`
 > Crea una usuario administrador para acceder a la app admin
+
 
