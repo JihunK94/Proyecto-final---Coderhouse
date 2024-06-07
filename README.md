@@ -1,7 +1,8 @@
-Comision: "54140"
-Alumno: Jihun Kim
-Profesor: Esteban Acevedo
-Tutor: Hugo Mon
+Comision : 54140
+Alumno : Jihun Kim
+Profesor : Esteban Acevedo
+Tutor : Hugo Mon
+
 
 Proyecto: Este proyecto surgió con la idea de poder ayudar a las personas latinas a que se puedan introducir al mundo gastronómico coreano de la manera más sencilla posible.
 
